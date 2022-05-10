@@ -5,7 +5,7 @@ class Program
         static void Main(string[] args)
         {
             string text = Console.ReadLine();
-            string[] spled = text.Split(new char[]{' ', ':','.',',', '!', '?'}, StringSplitOptions.RemoveEmptyEntries);
+            string[] spled = text.Split(new char[]{' ', ':','.',',', '!', '?', ';', '='}, StringSplitOptions.RemoveEmptyEntries);
             var res = from word in spled
                       where word.Length <= 3
                       select word;
@@ -20,6 +20,5 @@ class Program
                     Console.WriteLine(s);
                 }
             }
-            Console.ReadLine();
         }
     }
